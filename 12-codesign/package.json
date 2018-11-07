@@ -1,0 +1,23 @@
+{
+  "name": "codesign",
+  "productName": "Hello World",
+  "author": "Cameron Nokes",
+  "version": "1.0.0",
+  "description": "Electron app demonstrating electron-builder with codesigning",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "package": "build"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^3.0.7",
+    "electron-builder": "20.31.2"
+  },
+  "build": { 
+    "files": "!build-assets${/*}",
+    "appId": "com.Egghead.HelloWorld",
+    "forceCodeSigning": true
+  }
+}
